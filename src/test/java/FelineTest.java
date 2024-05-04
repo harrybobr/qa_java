@@ -10,12 +10,10 @@ import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-
 public class FelineTest {
   private Feline feline = new Feline();
 
-  @Spy
-  private Feline felineSpy = new Feline();
+  @Spy private Feline felineSpy = new Feline();
 
   @Test
   public void testEatMeat() throws Exception {
@@ -49,5 +47,4 @@ public class FelineTest {
     felineSpy.getKittens();
     Mockito.verify(felineSpy, Mockito.times(1)).getKittens();
   }
-
 }

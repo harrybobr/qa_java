@@ -10,8 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
-  @Mock
-  Feline mockFeline;
+  @Mock Feline mockFeline;
 
   @Test
   public void testGetSound() {
@@ -27,8 +26,5 @@ public class CatTest {
     List<String> expectedList = List.of("Животные", "Птицы", "Рыба");
     Mockito.when(mockFeline.eatMeat()).thenReturn(expectedList);
     Assert.assertEquals(expectedList, kitty.getFood());
-    System.out.println("Actual Result: " + mockFeline.eatMeat());
-    System.out.println("Expected Result: " + expectedList);
   }
-
 }
